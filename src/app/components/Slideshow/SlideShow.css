@@ -1,0 +1,21 @@
+.slideshow-container {
+    max-width: 40vw;
+    max-height: 40vw;
+    position: relative;
+  }
+  
+  .slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
