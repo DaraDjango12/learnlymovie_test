@@ -26,9 +26,9 @@ const MovieData = [
   },
   {
     title: "If i dont want to come",
-    id: "1",
+    id: "6",
     image: "https://bit.ly/dan-abramov",
     rating: "1",
   },
-  { title: "Lost", id: "6", image: "https://bit.ly/dan-abramov", rating: "1" },
+  { title: "Lost", id: "7", image: "https://bit.ly/dan-abramov", rating: "1" },
 ];

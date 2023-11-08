@@ -4,12 +4,14 @@ export const MovieApi = () => {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: "https://movie-database-alternative.p.rapidapi.com/",
+    url: `https://pixabay.com/api/?key=40548619-4029d7498e20dbd19888a8877`,
     headers: {
       "Content-Type": "application/json",
 
-      "X-RapidAPI-Key": "01be465d78msh0cac052e8b41e98p18335djsn142d1b5c17c9",
-      "X-RapidAPI-Host": "movie-database-alternative.p.rapidapi.com",
+    //   'key':'40548619-4029d7498e20dbd19888a8877'
+
+    //   "X-RapidAPI-Key": "01be465d78msh0cac052e8b41e98p18335djsn142d1b5c17c9",
+    //   "X-RapidAPI-Host": "movie-database-alternative.p.rapidapi.com",
     },
   };
 
