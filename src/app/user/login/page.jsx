@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <section className="flex h-[90vh] flex-row justify-center items-center gap-6 p-24">
+    <section className="flex h-[90vh] flex-row justify-center text-[black] items-center gap-6 p-24">
       <ToastContainer />
       <Card
         color="transparent"
