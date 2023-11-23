@@ -13,12 +13,13 @@ const Login = () => {
 
   const handleLogin = () => {
     if (email && password) {
-      const storedUser = JSON.parse(localStorage.getItem("user"));
+      const storedUser = JSON.parse(localStorage.getItem("userDetails"));
+      console.log("checkLogin",storedUser[0])
 
       if (
         storedUser &&
-        storedUser.email === email &&
-        storedUser.password === password
+        storedUser[1].userEmail === email &&
+        storedUser[1].userPassword === password
       ) {
         router.push("/movies");
         console.log("Login successful.");
@@ -42,7 +43,11 @@ const Login = () => {
         shadow={false}
         className="bg-slate-100 p-12 shadow-2xl rounded-xl"
       >
-        <Typography variant="h4" color="blue-gray" className="text-center text-[3rem]">
+        <Typography
+          variant="h4"
+          color="blue-gray"
+          className="text-center text-[3rem]"
+        >
           Login
         </Typography>
         <Typography color="gray" className="mt-1 text-[2rem] text-center">
@@ -89,7 +94,10 @@ const Login = () => {
           </Button>
           <Typography color="gray" className="mt-4 text-center font-normal">
             Don&apos;t have an account?{" "}
-            <a href="/user/register" className="font-medium  text-[green] hover:text=[purple]">
+            <a
+              href="/user/register"
+              className="font-medium  text-[green] hover:text=[purple]"
+            >
               Register
             </a>
           </Typography>
