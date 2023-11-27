@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState, useNavigate } from "react";
 import { useRouter } from "next/navigation";
-import { MovieApi } from "@/utils/Apicalls";
+import { MovieApi } from "../../utils/Apicalls";
 import image from "../../../public/assets/image/rose.png";
 
 function isAuthenticated() {
-  const userToken = localStorage.getItem("user");
+  const userToken = localStorage.getItem("users");
   return !!userToken;
 }
 

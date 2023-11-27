@@ -12,27 +12,25 @@ const Login = () => {
   const router = useRouter();
 
   const handleLogin = () => {
-    if (email && password) {
-      const storedUser = JSON.parse(localStorage.getItem("userDetails"));
-      console.log("checkLogin",storedUser[0])
 
-      if (
-        storedUser &&
-        storedUser[1].userEmail === email &&
-        storedUser[1].userPassword === password
-      ) {
-        router.push("/movies");
-        console.log("Login successful.");
-        toast.success("Login successful..");
-      } else {
-        console.log("Invalid email or password.");
-        toast.error("Invalid email or password.");
-      }
+    // Get existing users from local storage or initialize an empty array
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the entered username and password match any user
+    const isValidUser = existingUsers.some(user => user.userEmail === email && user.userPassword === password);
+
+    if (isValidUser) {
+      // Redirect to the dashboard or home page
+      toast.success("Login successful..")
+      router.push('/movies');
     } else {
-      console.log("Please provide an email and password.");
-      toast.error("Please provide an email and password.");
+      alert('Invalid username or password. Please try again.');
+      toast.error("Invalid email or password.");
     }
-    // Perform user registration here (e.g., send data to your API)
+
+
+    
+    
   };
 
   return (
